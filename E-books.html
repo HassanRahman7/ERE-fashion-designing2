@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Books Collection</title>
+  <link rel="stylesheet" href="E-books.css">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+    <img src="./images/logo 1.png" alt="Logo" class="logo" />
+    <div class="site-title">E R E</div>
+  </header>
+  <div class="container">
+    <h1 class="heading">E-BOOKS</h1>
+    <section class="carousel">
+      <div class="image-container">
+        <img src="./images/E-BOOKS (1).png" alt="">
+      </div>
+    </section>
+    <p class="description">
+      Students and faculty have 24/7 access to a rich collection of e-books developed by NRC. Please<br>
+      search the Web Online Public Access Catalogue of e-Granthalaya for the e-books. The right to access<br>
+      the fulltext is restricted.
+    </p>
+
+    <div class="collection-box">
+      <h2>COLLECTION</h2>
+    </div>
+
+    <!-- Entry 1 -->
+    <div class="entry">
+      <div class="entry-header">
+        BERG FASHION LIBRARY
+      </div>
+      <p class="entry-description">
+        Contains academic e-books that cover important classic and modern writings on fashion
+      </p>
+    </div>
+
+    <!-- Entry 2 -->
+    <div class="entry">
+      <div class="entry-header">
+        BLOOMSBURY APPLIED VISUAL ARTS
+      </div>
+      <p class="entry-description">
+        It offer access to e-books which combine visual inspiration with practical advice on idea generation, research techniques, portfolio development and more, across the main visual arts disciplines.
+      </p>
+    </div>
+
+    <!-- Entry 3 -->
+    <div class="entry">
+      <div class="entry-header">
+        BLOOMSBURY DESIGN LIBRARY
+      </div>
+      <p class="entry-description">
+        Bloomsbury has a collection of  e-books having scholarly coverage of design and crafts worldwide.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        FAIRCHILD BOOKS LIBRARY
+      </div>
+      <p class="entry-description">
+        Fairchild provide contents that cover a full spectrum of topics in fashion including construction, draping, fashion business management, history, illustration, journalism, marketing, promotion, theory, pattern making, styling, product development, sustainable fashion, textiles, and more.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        Ebook Central ProQuest
+      </div>
+      <p class="entry-description">
+        Central ProQuest is a collection of scholarly e-books in multiple subjects from world-renowned publishers.
+      </p>
+    </div>
+     
+    <div class="entry">
+      <div class="entry-header">
+        eBook Collection EBSCO Host
+      </div>
+      <p class="entry-description">
+        Covers subjects ranging from design, textiles to consumer behavior, marketing and more.
+      </p>
+    </div>
+  </div>
+  <footer class="footer">
+    <small>© E R E</small>
+  </footer>
+  <script>
+  // Map titles to their corresponding URLs
+  const links = {
+    "BERG FASHION LIBRARY": "https://www.bloomsburyfashioncentral.com/",
+    "BLOOMSBURY APPLIED VISUAL ARTS": "https://www.bloomsburyappliedvisualarts.com/login?recentUrl=/",
+    "BLOOMSBURY DESIGN LIBRARY": "https://www.bloomsburydesignlibrary.com/login?recentUrl=/home",
+    "FAIRCHILD BOOKS LIBRARY": "https://www.bloomsburyfashioncentral.com/",
+    "Ebook Central ProQuest": "http://ebookcentral.proquest.com/lib/nift-ebooks/home.action",
+    "eBook Collection EBSCO Host": "http://search.ebscohost.com/"
+  };
+
+  // Select all elements with class "main-box"
+  const mainBoxes = document.querySelectorAll('.entry-header');
+
+  mainBoxes.forEach(box => {
+    const title = box.textContent.trim();
+
+    box.style.cursor = "pointer"; // make it look clickable
+
+    box.addEventListener('click', () => {
+      const url = links[title];
+      if (url) {
+        window.location.href = url;
+      } else {
+        console.warn(`No link defined for: ${title}`);
+      }
+    });
+  });
+
+  // Array of corresponding HTML file names for each "About" box
+  const aboutPages = [
+    "AboutbergfashionLibrary.html",
+    "Aboutbloomsburyfashionbusinesscases.html",
+    "AboutFairchildBooksLibrary.html"
+    // Add more filenames in the same order as your visible "About" boxes
+  ];
+
+  // Select all visible "About" side-boxes
+  const aboutBoxes = Array.from(document.querySelectorAll('.side-box'))
+    .filter(box => box.textContent.trim().toLowerCase() === 'about');
+
+  // Add click listeners
+  aboutBoxes.forEach((box, index) => {
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', () => {
+      if (aboutPages[index]) {
+        window.location.href = aboutPages[index];
+      } else {
+        console.warn(`No HTML file defined for About box at index ${index}`);
+      }
+    });
+  });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Resources</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+  <header class="site-header">
+    <img src="./images/logo 1.png" alt="Logo" class="logo" />
+    <div class="site-title">E R E</div>
+    <div class="auth-buttons">
+      <button class="btn">Login</button>
+      <button class="btn">Register</button>
+    </div>
+  </header>
+  <div class="margin-bottom margin-xxlarge">
+    <div style="opacity: 1;" class="text-align-center">
+      <div class="max-width-large align-cente0r">
+        <div class="margin-bottom margin-small">
+          <h1>
+            <span class="hero-home-light-text">
+              Meet
+              <span class="hero-home-light-text2">ERE</span>    
+            </span>
+            "Your one stop solution"
+          </h1>
+        </div>
+        <p class="paragraph-large">
+          Utilize all available resources to their fullest potential.
+        </p>
+        <div class="margin-top margin-medium">
+          <div class="button-group is-center">
+            <a href="" class="button w-button">Request Renewal</a>
+            <a href="#" id="calendlyBtn1" class="button is-secondary w-button">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <img src="./images/rot.png" alt="" id="slide-1">
+          <img src="./images/wn.png" alt="" id="slide-2">
+          <img src="./images/ue.png" alt="" id="slide-3">
+          <img src="./images/st.png" alt="" id="slide-4">
+        </div>
+        <button class="nav left" id="prev">&#10094;</button>
+        <button class="nav right" id="next">&#10095;</button>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+        </div>
+      </div>
+    </section>
+
+    <p class="quote"><em>“Activity leads to productivity”</em></p>
+    <p class="description">Keep going, even small steps count. We've got all the things require :)</p>
+
+    <section class="links">
+      <a href="#" id="online-database-btn" class="link-btn">Online Database</a>
+      <a href="#" id="e-Books-btn" class="link-btn">E-Books</a>
+      <a href="https://eg4.nic.in/NIFT/OPAC/Default.aspx" class="link-btn">E-Granthalaya</a>
+      <a href="#" id="e-journals-btn" class="link-btn">E-Journals</a>
+      <a href="#" id="Services-btn" class="link-btn">Services (Resource Centre)</a>
+      <a href="#" class="link-btn">Recently Accessed</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© E R E</small>
+  </footer>
+  <script>
+    const slider = document.getElementById('slider');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+  
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+    });
+  </script>  
+</body>
+</html>

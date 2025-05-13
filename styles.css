@@ -1,0 +1,331 @@
+:root {
+    --red: rgb(175, 45, 35);
+    --white: #ffffff;
+    --light-gray: #f2f2f2;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font);
+    background-color: var(--white);
+    color: var(--red);
+    text-align: center;
+    font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 466;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  }
+  .link-btn.light {
+    background-color: rgb(175, 45, 35);
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+  }
+  
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--red);
+    background-color: var(--white);
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .image-container{
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.3);
+    border: 5px solid #fff;
+    width:450px;
+    height: 250px;
+    overflow: hidden;
+  }
+  .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 340;
+    font-style: normal;
+  }
+  
+  .auth-buttons .btn {
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--red);
+    background: var(--white);
+    color: var(--red);
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .subtitle {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .tags {
+    margin: 1rem 0;
+  }
+  
+  .tag {
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .carousel-item {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .nav {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--red);
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem;
+  }
+  /* General Container Utilities */
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.margin-xxlarge {
+  margin-bottom: 6rem;
+}
+
+.margin-small {
+  margin-bottom: 1rem;
+}
+
+.margin-medium {
+  margin-top: 2rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.max-width-large {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+.hero-home-light-text {
+  display: block;
+  font-size: 1.2rem;
+  color: rgb(175, 45, 35); /* red accent */
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 455;
+  font-style: normal;
+}
+.hero-home-light-text2{
+  font-size: 5rem;
+}
+
+/* Paragraph */
+.paragraph-large {
+  font-size: 1rem;
+  color: #555; /* soft gray text for secondary emphasis */
+  margin: 0 auto;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+.button {
+  background-color: rgb(175, 45, 35); /* primary red */
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(150, 35, 30);
+}
+
+.button.is-secondary {
+  background-color: white;
+  color: rgb(175, 45, 35);
+  border: 2px solid rgb(175, 45, 35);
+}
+
+.button.is-secondary:hover {
+  background-color: rgb(175, 45, 35);
+  color: white;
+}
+
+  .description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .link-btn {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 80%;
+  }
+  .container{
+    padding: 2rem;
+  }  
+  .slider-wrapper{
+    position: relative;
+    max-width: 68rem;
+    margin: 0 auto;
+
+  }
+  .slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%0%,0.25);
+    border-radius: 0.5rem;
+
+  }
+  .slider img{
+    flex:0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+  }
+  .slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  .slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border:2px solid rgb(175, 45, 35);
+    border-radius: 50%;
+    opacity: 0.75;
+    transition: opacity easy 250ms;
+    display: inline-block;
+  }
+  .slider-nav a:hover{
+    opacity: 1;
+  }
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 3;
+    color: rgb(175, 45, 35);
+    border-radius: 50%;
+  }
+  
+  .nav.left {
+    left: 1rem;
+  }
+  
+  .nav.right {
+    right: 1rem;
+  }
+  
+  .nav:hover {
+    background-color: rgb(175, 45, 35);
+    color: #fff;
+  }
+  .footer{
+    text-align: center;
+    padding: 1rem;
+    background-color:white;
+    color: rgb(175, 45, 35);
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 565;
+    font-style: normal;
+  }

@@ -1,0 +1,167 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(175, 45, 35);
+    color: white;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 454;
+    font-style: normal;
+  }
+  
+  .content {
+    padding: 2rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: rgb(175, 45, 35);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .resource-name {
+    font-weight: bold;
+    flex: 1 1 50%;
+    color: #222;
+  }
+  
+  .resource-actions {
+    display: flex;
+    gap: 1rem;
+    flex: 1 1 40%;
+    justify-content: flex-end;
+  }
+  
+  .btn {
+    background-color: rgb(175, 45, 35);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+}
+
+.section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-box {
+  background-color: rgb(175, 45, 35); /* Red */
+  color: white;
+  border-radius: 40px;
+  padding: 40px 60px;
+  text-align: center;
+  min-width: 350px;
+}
+
+.main-box h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.main-box p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.side-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+  }
+  .image-container{
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.3);
+    border: 5px solid #fff;
+    width:450px;
+    height: 250px;
+    overflow: hidden;
+  }
+   .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.side-box {
+  background-color: rgb(175, 45, 35); /* Red */
+  color: white;
+  border-radius: 25px;
+  padding: 20px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+  .btn:hover {
+    background-color: rgb(145, 35, 28);
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(175, 45, 35);
+    color: white;
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 565;
+    font-style: normal;
+  }
+  
+  

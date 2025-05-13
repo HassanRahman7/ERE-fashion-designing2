@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Studies - E R E</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <img src="./images/logo 1.png" alt="Logo" class="logo" />
+    <div class="site-title">E R E</div>
+  </header>
+
+  <main class="content">
+    <h2 class="section-title">General News and other topics</h2>
+    <section class="carousel">
+      <div class="image-container">
+        <img src="./images/General news and others.png" alt="">
+      </div>
+    </section>
+    <div class="container">
+      <div class="section">
+      <div class="main-box">
+        <h2>Magzter/Edzter</h2>
+        <p>click to access</p>
+      </div>
+      <div class="side-boxes">
+        <div class="side-box">About</div>
+        <div class="side-box">How to access</div>
+      </div>
+    </div>
+      <div class="section">
+      <div class="main-box">
+        <h2>QuillBot</h2>
+        <p>click to access</p>
+      </div>
+      <div class="side-boxes">
+        <div class="side-box">About</div>
+        <div class="side-box">How to access</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="main-box">
+        <h2>Scribbr</h2>
+        <p>click to access</p>
+      </div>
+      <div class="side-boxes">
+        <div class="side-box">About</div>
+        <div class="side-box">How to access</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>© E R E</small>
+  </footer>
+  <script>
+  // Map titles to their corresponding URLs
+  const links = {
+    "Magzter/Edzter": "http://library.magzter.com ",
+    "QuillBot": "https://quillbot.com//",
+    "Scribbr": "https://www.scribbr.com/"
+  };
+
+  // Select all elements with class "main-box"
+  const mainBoxes = document.querySelectorAll('.main-box');
+
+  mainBoxes.forEach(box => {
+    const title = box.querySelector('h2').textContent.trim();
+
+    box.style.cursor = "pointer"; // make it look clickable
+
+    box.addEventListener('click', () => {
+      const url = links[title];
+      if (url) {
+        window.location.href = url;
+      } else {
+        console.warn(`No link defined for: ${title}`);
+      }
+    });
+  });
+
+  // Array of corresponding HTML file names for each "About" box
+  const aboutPages = [
+    "AboutMagzter.html",
+    "AboutQuillBot.html",
+    "AboutScribbr.html"
+    // Add more filenames in the same order as your visible "About" boxes
+  ];
+
+  // Select all visible "About" side-boxes
+  const aboutBoxes = Array.from(document.querySelectorAll('.side-box'))
+    .filter(box => box.textContent.trim().toLowerCase() === 'about');
+
+  // Add click listeners
+  aboutBoxes.forEach((box, index) => {
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', () => {
+      if (aboutPages[index]) {
+        window.location.href = aboutPages[index];
+      } else {
+        console.warn(`No HTML file defined for About box at index ${index}`);
+      }
+    });
+  });
+
+
+</script>
+</body>
+</html>
